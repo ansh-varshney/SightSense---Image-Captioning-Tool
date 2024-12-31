@@ -1,4 +1,4 @@
-# SightSense - I Can Tell What I See 👁️
+# SightSense - I Tell What I See 👁️
 
 ## Introduction
 SightSense is an advanced **Image Captioning System** that combines **Convolutional Neural Networks (CNN)** and **Long Short-Term Memory (LSTM)** networks to automatically generate descriptive captions for images. With SightSense, the system "sees" and "understands" the content of an image and provides a human-readable description, making it useful for a wide range of applications such as accessibility, social media, and more.
