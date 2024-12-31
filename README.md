@@ -9,6 +9,7 @@ SightSense is an advanced **Image Captioning System** that combines **Convolutio
 - **Pre-trained Model Integration**: Leverages pre-trained CNN models (e.g., ResNet50) for efficient feature extraction from images.
 - **Seamless Integration**: The model combines CNN for image processing and LSTM for natural language generation to provide accurate, context-aware captions.
 - **Customizable**: The architecture allows for customization with different CNN and LSTM configurations for improved performance on domain-specific data.
+- **Web Interface**: A user-friendly website has been created where users can upload images and receive captions instantly.
 
 ## How It Works 🔍
 
@@ -22,20 +23,18 @@ SightSense is an advanced **Image Captioning System** that combines **Convolutio
    - **Word-by-Word Prediction**: The LSTM decodes the image features step-by-step, generating a caption word by word. It captures the relationships between the extracted features and the context of the image.
    - **Language Understanding**: The LSTM is trained on datasets with image-caption pairs, enabling it to understand linguistic structures and form coherent sentences.
 
-### 3. **Training the Model**
-   - The model is trained on large datasets, such as **MS COCO** or **Flickr30k**, which include a wide variety of images and captions.
-   - The training process involves fine-tuning both the CNN and LSTM components, improving their ability to extract relevant features and generate appropriate captions.
-   - During training, the LSTM learns the syntax, grammar, and context necessary to generate human-like descriptions from visual data.
+### 3. **Database Creation and Usage**
+   - The system uses the **Flickr8k dataset** (available [here](https://www.kaggle.com/datasets/adityajn105/flickr8k)) for training and generating captions. This dataset consists of 8,000 images with corresponding captions, which are used to train the model for both visual recognition and text generation.
+   - The **image-caption pairs** from the dataset are processed to create a database that links image features to their corresponding captions. This database is then used for training and fine-tuning the CNN and LSTM components to improve caption generation accuracy.
+   - (Note: The **Flickr8k dataset** is not included in the GitHub repository due to size limitations.)
 
 ### 4. **Generating Captions for New Images**
    - **Real-Time Processing**: Once the model is trained, it can process new images. The CNN extracts features from the input image, and these features are passed to the LSTM, which generates a caption.
    - **Output**: The generated caption describes the content of the image, including objects, actions, and relationships, providing a natural language output that can be used for accessibility, media tagging, and more.
 
-## Usage 🚀
-1. **Image Captioning**: Upload an image, and the system will generate a descriptive caption based on its content. 
-2. **Accessibility**: The captions generated can help visually impaired users understand the contents of images.
-3. **Social Media & Content Creation**: Automatically generate captions for images to streamline content creation and enhance user engagement.
-4. **Documenting Visual Data**: Use the system to generate captions for large sets of images for documentation purposes, such as for research or business purposes.
+## Website for Caption Generation 🌐
+- A **web interface** has been developed to allow users to upload images and receive the generated captions directly. The website provides an easy-to-use experience for generating captions in real-time.
+- Users can interact with the system by simply uploading an image, and the backend processes the image, generates a caption, and displays it on the screen.
 
 ## Technologies Used 🛠️
 - **Convolutional Neural Networks (CNN)**: For feature extraction from images.
@@ -45,6 +44,9 @@ SightSense is an advanced **Image Captioning System** that combines **Convolutio
 - **Python**: The primary programming language used for implementing the system.
 - **NumPy**: For handling numerical operations and data manipulation.
 - **Matplotlib**: For visualizations and analysis of model performance.
+- **HTML/CSS/JS**: For building the user-friendly web interface.
+- **DBMS**: For storing and managing image-caption pairs in a database for training and real-time caption generation.
+- **Flickr8k Dataset**: The dataset used for training (not included in the repo; available [here](https://www.kaggle.com/datasets/adityajn105/flickr8k)).
 
 ## Conclusion 🎯
 SightSense leverages the power of **CNN** and **LSTM** to create a system capable of understanding images and generating descriptive captions that accurately reflect the content. By combining cutting-edge computer vision and natural language processing techniques, the system not only "sees" the image but also "speaks" about it in human-readable language, making it a valuable tool in various fields like accessibility, social media, and content management.
